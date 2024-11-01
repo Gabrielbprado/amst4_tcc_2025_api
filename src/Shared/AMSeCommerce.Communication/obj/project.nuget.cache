@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "Ta3FNksjTg2LuBXEmHKFFpJ8dnTSrwOxU2azVE9AKpB5iRToxd+2U8z0bzuRxsEGH5GpWYtsfiuDjNR/1ZVAxA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Shared\\AMSeCommerce.Communication\\AMSeCommerce.Communication.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\guard\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.10\\sqlitepclraw.bundle_e_sqlite3.2.1.10.nupkg.sha512",
+    "C:\\Users\\guard\\.nuget\\packages\\sqlitepclraw.core\\2.1.10\\sqlitepclraw.core.2.1.10.nupkg.sha512",
+    "C:\\Users\\guard\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.10\\sqlitepclraw.lib.e_sqlite3.2.1.10.nupkg.sha512",
+    "C:\\Users\\guard\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.10\\sqlitepclraw.provider.e_sqlite3.2.1.10.nupkg.sha512",
+    "C:\\Users\\guard\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+  ],
+  "logs": []
+}

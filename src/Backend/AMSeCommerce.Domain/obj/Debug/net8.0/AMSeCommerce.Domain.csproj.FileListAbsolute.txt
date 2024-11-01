@@ -1,0 +1,12 @@
+C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Domain\bin\Debug\net8.0\AMSeCommerce.Domain.deps.json
+C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Domain\bin\Debug\net8.0\AMSeCommerce.Domain.dll
+C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Domain\bin\Debug\net8.0\AMSeCommerce.Domain.pdb
+C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Domain\obj\Debug\net8.0\AMSeCommerce.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Domain\obj\Debug\net8.0\AMSeCommerce.Domain.AssemblyInfoInputs.cache
+C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Domain\obj\Debug\net8.0\AMSeCommerce.Domain.AssemblyInfo.cs
+C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Domain\obj\Debug\net8.0\AMSeCommerce.Domain.csproj.CoreCompileInputs.cache
+C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Domain\obj\Debug\net8.0\AMSeCommerce.Domain.dll
+C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Domain\obj\Debug\net8.0\refint\AMSeCommerce.Domain.dll
+C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Domain\obj\Debug\net8.0\AMSeCommerce.Domain.pdb
+C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Domain\obj\Debug\net8.0\ref\AMSeCommerce.Domain.dll
+C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Domain\obj\Debug\net8.0\AMSeCommerce.Domain.csproj.AssemblyReference.cache

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Xi29C3YpnIgslYDne9cCBGjim0qP4Tarrro4zCnxP0E=",
+  "Source": "AMSeCommerce.API",
+  "BasePath": "_content/AMSeCommerce.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
