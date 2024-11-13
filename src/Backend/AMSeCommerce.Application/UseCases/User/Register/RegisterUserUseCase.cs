@@ -1,8 +1,8 @@
-using AMS_News.Communication.Request.User;
 using AMS_News.Communication.Response.Token;
 using AMS_News.Communication.Response.User;
 using AMS_News.Domain.Contracts;
 using AMS_News.Domain.Contracts.Token;
+using AMSeCommerce.Communication.Request.User;
 using AMSeCommerce.Domain.Contracts.User;
 using AMSeCommerce.Domain.Entities;
 using AMSeCommerce.Exceptions;

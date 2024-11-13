@@ -1,4 +1,4 @@
-namespace AMS_News.Communication.Request;
+namespace AMSeCommerce.Communication.Request;
 
 public class RequestLoginUserJson
 {

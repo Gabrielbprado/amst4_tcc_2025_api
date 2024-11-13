@@ -1,5 +1,5 @@
-using AMS_News.Communication.Request.User;
 using AMSeCommerce.Application.SharedValidators;
+using AMSeCommerce.Communication.Request.User;
 using AMSeCommerce.Exceptions;
 using FluentValidation;
 

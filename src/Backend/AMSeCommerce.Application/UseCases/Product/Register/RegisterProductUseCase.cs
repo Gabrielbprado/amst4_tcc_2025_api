@@ -4,7 +4,6 @@ using AMS_News.Domain.Contracts;
 using AMSeCommerce.Application.Extensions;
 using AMSeCommerce.Communication.Request.Product;
 using AMSeCommerce.Communication.Response.Product;
-using AMSeCommerce.Domain.Contracts;
 using AMSeCommerce.Domain.Contracts.Category;
 using AMSeCommerce.Domain.Contracts.Product;
 using AMSeCommerce.Domain.Contracts.Storage;
@@ -12,7 +11,7 @@ using AMSeCommerce.Domain.Contracts.Token;
 using AMSeCommerce.Exceptions.BaseExceptions;
 using AutoMapper;
 
-namespace AMSeCommerce.Application.UseCases.Product;
+namespace AMSeCommerce.Application.UseCases.Product.Register;
 
 public class RegisterProductUseCase(
     IProductWriteOnlyRepository productRepository,
@@ -36,11 +35,9 @@ public class RegisterProductUseCase(
         var user = await _loggedUser.User();
 
         var product = _mapper.Map<Domain.Entities.Product>(request);
+        product.UserIdentifier = user.Id;
         product.Category = await _categoryReadOnlyRepository.GetCategoryById(request.CategoryId);
         
-        
-
-        // Upload da imagem principal do produto
         if (request.Image is not null)
         {
             var fileStream = request.Image.OpenReadStream();
@@ -49,8 +46,8 @@ public class RegisterProductUseCase(
             if (!isValidImage)
                 throw new ErrorOnValidatorException(new List<string> { "Only images are accepted" });
 
-            var imageIdentifier = $"{Guid.NewGuid()}{extension}";
-            product.ImageUrl = await _blob.Upload(user,fileStream, imageIdentifier);
+            product.ImageIdentifier = $"{Guid.NewGuid()}{extension}";
+            await _blob.Upload(user,fileStream, product.ImageIdentifier);
         }
 
         await _productRepository.AddProduct(product);

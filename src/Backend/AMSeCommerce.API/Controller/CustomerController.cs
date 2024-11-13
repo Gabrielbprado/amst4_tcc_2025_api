@@ -1,4 +1,3 @@
-using AMS_News.Communication.Request.User;
 using AMS_News.Communication.Response;
 using AMS_News.Communication.Response.User;
 using AMSeCommerce.API.Attribute;
@@ -6,6 +5,7 @@ using AMSeCommerce.Application.UseCases.User.ChangePassword;
 using AMSeCommerce.Application.UseCases.User.Profile;
 using AMSeCommerce.Application.UseCases.User.Register;
 using AMSeCommerce.Application.UseCases.User.Update;
+using AMSeCommerce.Communication.Request.User;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AMSeCommerce.API.Controller;

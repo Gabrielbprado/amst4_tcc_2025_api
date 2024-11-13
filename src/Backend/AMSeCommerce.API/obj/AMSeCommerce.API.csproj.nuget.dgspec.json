@@ -192,7 +192,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Shared\\AMSeCommerce.Communication\\AMSeCommerce.Communication.csproj": {
+                "projectPath": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Shared\\AMSeCommerce.Communication\\AMSeCommerce.Communication.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -254,6 +258,9 @@
             "projectReferences": {
               "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Backend\\AMSeCommerce.Domain\\AMSeCommerce.Domain.csproj": {
                 "projectPath": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Backend\\AMSeCommerce.Domain\\AMSeCommerce.Domain.csproj"
+              },
+              "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Shared\\AMSeCommerce.Communication\\AMSeCommerce.Communication.csproj": {
+                "projectPath": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Shared\\AMSeCommerce.Communication\\AMSeCommerce.Communication.csproj"
               }
             }
           }
@@ -268,6 +275,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Azure.AI.OpenAI": {
+              "target": "Package",
+              "version": "[1.0.0-beta.5, )"
+            },
             "Azure.Storage.Blobs": {
               "target": "Package",
               "version": "[12.22.2, )"
@@ -315,6 +326,10 @@
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[6.35.0, )"
+            },
+            "mercadopago-sdk": {
+              "target": "Package",
+              "version": "[2.4.1, )"
             }
           },
           "imports": [

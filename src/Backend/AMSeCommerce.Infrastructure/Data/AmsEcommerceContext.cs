@@ -11,6 +11,7 @@ public class AmsEcommerceContext(DbContextOptions<AmsEcommerceContext> opts) : D
     public DbSet<ProductImage> ProductImages { get; set; }
     public DbSet<Order> Orders { get; set; }
     public DbSet<OrderItem> OrderItems { get; set; }
+    public DbSet<ShoppingCart> ShoppingCart { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

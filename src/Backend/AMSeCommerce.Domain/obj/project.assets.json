@@ -145,6 +145,22 @@
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
         }
+      },
+      "AMSeCommerce.Communication/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "SQLitePCLRaw.bundle_e_sqlite3": "2.1.10"
+        },
+        "compile": {
+          "bin/placeholder/AMSeCommerce.Communication.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AMSeCommerce.Communication.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -261,10 +277,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "AMSeCommerce.Communication/1.0.0": {
+      "type": "project",
+      "path": "../../Shared/AMSeCommerce.Communication/AMSeCommerce.Communication.csproj",
+      "msbuildProject": "../../Shared/AMSeCommerce.Communication/AMSeCommerce.Communication.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "AMSeCommerce.Communication >= 1.0.0",
       "SQLitePCLRaw.bundle_e_sqlite3 >= 2.1.10"
     ]
   },
@@ -292,7 +314,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Shared\\AMSeCommerce.Communication\\AMSeCommerce.Communication.csproj": {
+              "projectPath": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Shared\\AMSeCommerce.Communication\\AMSeCommerce.Communication.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -4,5 +4,5 @@ namespace AMSeCommerce.Domain.Contracts.Token;
 
 public interface ILoggedUser
 {
-    Task<Customers?> User();
+    Task<Customers> User();
 }

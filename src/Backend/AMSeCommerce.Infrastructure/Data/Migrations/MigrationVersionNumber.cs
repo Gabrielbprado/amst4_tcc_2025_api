@@ -8,4 +8,5 @@ public abstract class MigrationVersionNumber
     public const int CreateTableProductImage = 4;
     public const int CreateTableOrders = 5;
     public const int CreateTableOrdersItems = 6;
+    public const int CreateTableShoppingCart = 7;
 }

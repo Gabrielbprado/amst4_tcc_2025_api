@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "vUbP6OhGIa29HN4Tfe/XZA1igDQyN9Fw6v1noCQ0LitLWSwRD0m4XM4U25Wo2K88mqfSe+z/YKquv42xJewt6Q==",
+  "dgSpecHash": "4Q6jCmSWDrgn3GicXGAE6Ddh7p9kF5zxIRXCxe8XCm3hmPDNYac/nqmn67Ub9T866pihGjDURcD+HdknZkeR0Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Backend\\AMSeCommerce.Infrastructure\\AMSeCommerce.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\guard\\.nuget\\packages\\azure.ai.openai\\1.0.0-beta.5\\azure.ai.openai.1.0.0-beta.5.nupkg.sha512",
     "C:\\Users\\guard\\.nuget\\packages\\azure.core\\1.44.1\\azure.core.1.44.1.nupkg.sha512",
     "C:\\Users\\guard\\.nuget\\packages\\azure.storage.blobs\\12.22.2\\azure.storage.blobs.12.22.2.nupkg.sha512",
     "C:\\Users\\guard\\.nuget\\packages\\azure.storage.common\\12.21.1\\azure.storage.common.12.21.1.nupkg.sha512",
@@ -11,6 +12,7 @@
     "C:\\Users\\guard\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
     "C:\\Users\\guard\\.nuget\\packages\\fluentmigrator\\6.2.0\\fluentmigrator.6.2.0.nupkg.sha512",
     "C:\\Users\\guard\\.nuget\\packages\\fluentmigrator.abstractions\\6.2.0\\fluentmigrator.abstractions.6.2.0.nupkg.sha512",
+    "C:\\Users\\guard\\.nuget\\packages\\mercadopago-sdk\\2.4.1\\mercadopago-sdk.2.4.1.nupkg.sha512",
     "C:\\Users\\guard\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\guard\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\guard\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.10\\microsoft.data.sqlite.core.8.0.10.nupkg.sha512",
@@ -35,6 +37,8 @@
     "C:\\Users\\guard\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.35.0\\microsoft.identitymodel.tokens.6.35.0.nupkg.sha512",
     "C:\\Users\\guard\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\guard\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\guard\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\guard\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\guard\\.nuget\\packages\\sqlite\\3.13.0\\sqlite.3.13.0.nupkg.sha512",
     "C:\\Users\\guard\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.10\\sqlitepclraw.bundle_e_sqlite3.2.1.10.nupkg.sha512",
     "C:\\Users\\guard\\.nuget\\packages\\sqlitepclraw.core\\2.1.10\\sqlitepclraw.core.2.1.10.nupkg.sha512",
@@ -42,7 +46,9 @@
     "C:\\Users\\guard\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.10\\sqlitepclraw.provider.e_sqlite3.2.1.10.nupkg.sha512",
     "C:\\Users\\guard\\.nuget\\packages\\system.clientmodel\\1.1.0\\system.clientmodel.1.1.0.nupkg.sha512",
     "C:\\Users\\guard\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "C:\\Users\\guard\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.0\\system.configuration.configurationmanager.6.0.0.nupkg.sha512",
     "C:\\Users\\guard\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
+    "C:\\Users\\guard\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
     "C:\\Users\\guard\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.35.0\\system.identitymodel.tokens.jwt.6.35.0.nupkg.sha512",
     "C:\\Users\\guard\\.nuget\\packages\\system.io.hashing\\6.0.0\\system.io.hashing.6.0.0.nupkg.sha512",
     "C:\\Users\\guard\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
@@ -50,12 +56,16 @@
     "C:\\Users\\guard\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\guard\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
     "C:\\Users\\guard\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\guard\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
     "C:\\Users\\guard\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512",
+    "C:\\Users\\guard\\.nuget\\packages\\system.security.cryptography.protecteddata\\6.0.0\\system.security.cryptography.protecteddata.6.0.0.nupkg.sha512",
+    "C:\\Users\\guard\\.nuget\\packages\\system.security.permissions\\6.0.0\\system.security.permissions.6.0.0.nupkg.sha512",
     "C:\\Users\\guard\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\guard\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\guard\\.nuget\\packages\\system.text.json\\6.0.10\\system.text.json.6.0.10.nupkg.sha512",
     "C:\\Users\\guard\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\guard\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+    "C:\\Users\\guard\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
+    "C:\\Users\\guard\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

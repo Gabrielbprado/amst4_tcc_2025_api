@@ -1,5 +1,5 @@
-using AMS_News.Communication.Request.User;
 using AMS_News.Communication.Response.User;
+using AMSeCommerce.Communication.Request.User;
 
 namespace AMSeCommerce.Application.UseCases.User.Register;
 

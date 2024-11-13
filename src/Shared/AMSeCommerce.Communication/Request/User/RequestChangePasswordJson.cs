@@ -1,4 +1,4 @@
-namespace AMS_News.Communication.Request.User;
+namespace AMSeCommerce.Communication.Request.User;
 
 public class RequestChangePasswordJson
 {

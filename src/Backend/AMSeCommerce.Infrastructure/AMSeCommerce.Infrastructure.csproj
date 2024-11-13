@@ -1,14 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Shared\AMSeCommerce.Communication\AMSeCommerce.Communication.csproj" />
     <ProjectReference Include="..\AMSeCommerce.Domain\AMSeCommerce.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Azure.AI.OpenAI" Version="1.0.0-beta.5" />
     <PackageReference Include="Azure.Storage.Blobs" Version="12.22.2" />
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
     <PackageReference Include="Dapper" Version="2.1.35" />
     <PackageReference Include="FluentMigrator" Version="6.2.0" />
+    <PackageReference Include="mercadopago-sdk" Version="2.4.1" />
     <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="8.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="8.0.10" />

@@ -1,4 +1,4 @@
-using AMS_News.Communication.Request.User;
+using AMSeCommerce.Communication.Request.User;
 
 namespace AMSeCommerce.Application.UseCases.User.Update;
 

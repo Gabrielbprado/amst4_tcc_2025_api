@@ -1,4 +1,4 @@
-using AMS_News.Communication.Request.User;
+using AMSeCommerce.Communication.Request.User;
 using AMSeCommerce.Exceptions;
 using FluentValidation;
 
@@ -10,7 +10,7 @@ public class UpdateUserValidator : AbstractValidator<RequestUpdateUserJson>
     {
         CascadeMode = CascadeMode.Stop;
 
-        RuleFor(r => r.Name)
+        RuleFor(r => r.FirstName)
             .NotEmpty()
             .WithMessage(ErrorMessage.NAME_EMPTY);
             RuleFor(r => r.Email)

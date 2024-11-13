@@ -10,3 +10,4 @@ C:\Users\guard\App1\AMSeCommerce\src\Shared\AMSeCommerce.Communication\obj\Debug
 C:\Users\guard\App1\AMSeCommerce\src\Shared\AMSeCommerce.Communication\obj\Debug\net8.0\AMSeCommerce.Communication.pdb
 C:\Users\guard\App1\AMSeCommerce\src\Shared\AMSeCommerce.Communication\obj\Debug\net8.0\ref\AMSeCommerce.Communication.dll
 C:\Users\guard\App1\AMSeCommerce\src\Shared\AMSeCommerce.Communication\obj\Debug\net8.0\AMSeCommerce.Communication.csproj.AssemblyReference.cache
+C:\Users\guard\App1\AMSeCommerce\src\Shared\AMSeCommerce.Communication\obj\Debug\net8.0\AMSeCommerce.Communication.sourcelink.json

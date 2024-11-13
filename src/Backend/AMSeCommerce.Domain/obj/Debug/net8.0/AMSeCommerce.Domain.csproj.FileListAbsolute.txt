@@ -10,3 +10,9 @@ C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Domain\obj\Debug\net8.
 C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Domain\obj\Debug\net8.0\AMSeCommerce.Domain.pdb
 C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Domain\obj\Debug\net8.0\ref\AMSeCommerce.Domain.dll
 C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Domain\obj\Debug\net8.0\AMSeCommerce.Domain.csproj.AssemblyReference.cache
+C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Domain\obj\Debug\net8.0\AMSeCommerce.Domain.sourcelink.json
+C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Domain\bin\Debug\net8.0\AMSeCommerce.Communication.dll
+C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Domain\bin\Debug\net8.0\AMSeCommerce.Communication.pdb
+C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Domain\obj\Debug\net8.0\AMSeComm.1045AA41.Up2Date
+C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Domain\obj\Debug\net8.0\AMSeCommerce.Domain.Services.GPT.ResourceOpenAi.resources
+C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Domain\obj\Debug\net8.0\AMSeCommerce.Domain.csproj.GenerateResource.cache

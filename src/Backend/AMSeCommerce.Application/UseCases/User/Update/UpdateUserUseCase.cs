@@ -1,5 +1,5 @@
-using AMS_News.Communication.Request.User;
 using AMS_News.Domain.Contracts;
+using AMSeCommerce.Communication.Request.User;
 using AMSeCommerce.Domain.Contracts.Token;
 using AMSeCommerce.Domain.Contracts.User;
 using AMSeCommerce.Exceptions;
@@ -19,7 +19,8 @@ public class UpdateUserUseCase(ILoggedUser user,IUserReadOnlyRepository _read,IU
         var user = await _loggedUser.User();
         await Validate(request,request.Email);
         var newUser = await _read.GetById(user.Id);
-        newUser.Name = request.Name;
+        newUser.FirstName = request.FirstName;
+        newUser.LastName = request.LastName;
         newUser.Email = request.Email;
         _update.Update(newUser);
         await _unityOfWork.Commit();

@@ -1,7 +1,7 @@
-using AMS_News.Communication.Request.User;
 using AMS_News.Communication.Response.User;
 using AMSeCommerce.Communication.Request.Category;
 using AMSeCommerce.Communication.Request.Product;
+using AMSeCommerce.Communication.Request.User;
 using AMSeCommerce.Communication.Response.Category;
 using AMSeCommerce.Communication.Response.Product;
 using AMSeCommerce.Domain.Entities;
@@ -20,6 +20,7 @@ public class AutoMapperProfile : Profile
         CreateMap<Product, ResponseRegisteredProductJson>();
         CreateMap<RequestCategoryJson, Category>();
         CreateMap<Category, ResponseCategoryJson>();
-
+        CreateMap<Product, ResponseShortProductJson>();
+        CreateMap<Product, ResponseProductJson>();
     }    
 }

@@ -10,4 +10,23 @@
     <PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" Version="2.1.10" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\AMSeCommerce.Communication\AMSeCommerce.Communication.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Services\GPT\ResourceOpenAi.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResourceOpenAi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Services\GPT\ResourceOpenAi.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ResourceOpenAi.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
 </Project>

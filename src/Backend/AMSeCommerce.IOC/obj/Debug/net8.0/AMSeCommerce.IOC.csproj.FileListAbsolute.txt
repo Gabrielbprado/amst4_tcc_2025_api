@@ -21,3 +21,4 @@ C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.IOC\obj\Debug\net8.0\r
 C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.IOC\obj\Debug\net8.0\AMSeCommerce.IOC.pdb
 C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.IOC\obj\Debug\net8.0\ref\AMSeCommerce.IOC.dll
 C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.IOC\obj\Debug\net8.0\AMSeComm.CF6AA7A3.Up2Date
+C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.IOC\obj\Debug\net8.0\AMSeCommerce.IOC.sourcelink.json

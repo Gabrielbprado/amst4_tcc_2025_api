@@ -13,3 +13,6 @@ C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Infrastructure\obj\Deb
 C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Infrastructure\obj\Debug\net8.0\AMSeCommerce.Infrastructure.pdb
 C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Infrastructure\obj\Debug\net8.0\ref\AMSeCommerce.Infrastructure.dll
 C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Infrastructure\obj\Debug\net8.0\AMSeComm.6454D021.Up2Date
+C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Infrastructure\obj\Debug\net8.0\AMSeCommerce.Infrastructure.sourcelink.json
+C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Infrastructure\bin\Debug\net8.0\AMSeCommerce.Communication.dll
+C:\Users\guard\App1\AMSeCommerce\src\Backend\AMSeCommerce.Infrastructure\bin\Debug\net8.0\AMSeCommerce.Communication.pdb
