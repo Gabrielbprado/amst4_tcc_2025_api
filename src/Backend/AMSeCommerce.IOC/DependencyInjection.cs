@@ -6,7 +6,7 @@ using AMSeCommerce.Application.Services.AutoMapper;
 using AMSeCommerce.Application.UseCases.Category;
 using AMSeCommerce.Application.UseCases.Login;
 using AMSeCommerce.Application.UseCases.Order;
-using AMSeCommerce.Application.UseCases.Order.DoOrder;
+using AMSeCommerce.Application.UseCases.Order.DoPixOrder;
 using AMSeCommerce.Application.UseCases.Order.GetPayment;
 using AMSeCommerce.Application.UseCases.Product;
 using AMSeCommerce.Application.UseCases.Product.DashBoard;
@@ -14,6 +14,9 @@ using AMSeCommerce.Application.UseCases.Product.Generate;
 using AMSeCommerce.Application.UseCases.Product.GetById;
 using AMSeCommerce.Application.UseCases.Product.Register;
 using AMSeCommerce.Application.UseCases.ShoppingCart;
+using AMSeCommerce.Application.UseCases.ShoppingCart.AddItem;
+using AMSeCommerce.Application.UseCases.ShoppingCart.Delete;
+using AMSeCommerce.Application.UseCases.ShoppingCart.Get;
 using AMSeCommerce.Application.UseCases.User.ChangePassword;
 using AMSeCommerce.Application.UseCases.User.Profile;
 using AMSeCommerce.Application.UseCases.User.Register;
@@ -83,12 +86,15 @@ public static class DependencyInjection
         services.AddScoped<IProductReadOnlyRepository, ProductRepository>();
         services.AddScoped<IPaymentService, MercadoPagoPaymentService>();
         services.AddScoped<IOrderWriteOnlyRepository, OrderRepository>();
-        services.AddScoped<IDoOrderUseCase, DoOrderUseCase>();
+        services.AddScoped<IDoPixOrderUseCase, DoPixOrderUseCase>();
         services.AddScoped<IGetByIdProductUseCase, GetByIdProductUseCase>();
         services.AddScoped<IGetPaymentUseCase, GetPaymentUseCase>();
         services.AddScoped<IShoppingCartWriteOnlyRepository, ShoppingCartRepository>();
         services.AddScoped<IAddItemToCartUseCase, AddItemToCartUseCase>();
         services.AddScoped<IGenerateDescriptionUseCase, GenerateDescriptionUseCase>();
+        services.AddScoped<IShoppingCartReadOnlyRepository, ShoppingCartRepository>();
+        services.AddScoped<IGetCartUseCase, GetCartUseCase>();
+        services.AddScoped<IRemoveProductToCartUseCase, RemoveProductToCartUseCase>();
 
     }
     

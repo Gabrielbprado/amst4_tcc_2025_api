@@ -6,20 +6,17 @@ using AMSeCommerce.Domain.Contracts.Order;
 using AMSeCommerce.Domain.Contracts.Product;
 using AMSeCommerce.Domain.Contracts.Token;
 using AMSeCommerce.Domain.Services.Payment;
-using AutoMapper;
 
-namespace AMSeCommerce.Application.UseCases.Order.DoOrder;
+namespace AMSeCommerce.Application.UseCases.Order.DoCardOrder;
 
-public class DoOrderUseCase(IOrderWriteOnlyRepository repository,IMapper mapper,ILoggedUser logged,IUnityOfWork unityOfWork,IPaymentService paymentService,IProductReadOnlyRepository productReadOnlyRepository) : IDoOrderUseCase
+public class DoCardOrderUseCase(IOrderWriteOnlyRepository repository,ILoggedUser logged,IUnityOfWork unityOfWork,IPaymentService paymentService,IProductReadOnlyRepository productReadOnlyRepository) : IDoCardOrderUseCase
 {
     private readonly IOrderWriteOnlyRepository _repository = repository;
-    private readonly IMapper _mapper = mapper;
     private readonly ILoggedUser _logged = logged;
     private readonly IUnityOfWork _unityOfWork = unityOfWork;
     private readonly IPaymentService _paymentService = paymentService;
     private readonly IProductReadOnlyRepository _productReadOnlyRepository = productReadOnlyRepository;
-    
-    public async Task<ResponsePixJson> Execute(RequestOrderJson request)
+    public async Task<ResponseCardJson> Execute(RequestOrderJson request)
     {
         var product = await _productReadOnlyRepository.GetById(request.ProductId);
         var order = new Domain.Entities.Order
@@ -52,6 +49,6 @@ public class DoOrderUseCase(IOrderWriteOnlyRepository repository,IMapper mapper,
         order.PaymentMethodId = responsePix.TransactionId;
         await _repository.CreateOrder(order);
         await _unityOfWork.Commit();
-        return responsePix;
+        throw new NotImplementedException();
     }
 }

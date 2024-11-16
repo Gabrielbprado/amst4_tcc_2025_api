@@ -1,9 +1,9 @@
 using AMSeCommerce.Communication.Request.Order;
 using AMSeCommerce.Communication.Response.Payment;
 
-namespace AMSeCommerce.Application.UseCases.Order.DoOrder;
+namespace AMSeCommerce.Application.UseCases.Order.DoPixOrder;
 
-public interface IDoOrderUseCase
+public interface IDoPixOrderUseCase
 {
     Task<ResponsePixJson> Execute(RequestOrderJson request);
 }

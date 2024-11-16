@@ -10,6 +10,8 @@ public class CreateTableShoppingCart0000007 : BaseMigration
         CreateTable("ShoppingCart")
             .WithColumn("UserId").AsGuid().NotNullable()
             .ForeignKey("FK_Shopping_Customers", "Customers", "Id")
-            .WithColumn("Quantity").AsInt32().NotNullable();
+            .WithColumn("Quantity").AsInt32().NotNullable()
+            .WithColumn("ProductId").AsInt64().NotNullable()
+            .ForeignKey("FK_Shopping_Products", "Products", "Id");
     }
 }

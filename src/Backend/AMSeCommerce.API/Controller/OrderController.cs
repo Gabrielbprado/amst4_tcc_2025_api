@@ -1,5 +1,6 @@
 using AMSeCommerce.Application.UseCases.Order;
-using AMSeCommerce.Application.UseCases.Order.DoOrder;
+using AMSeCommerce.Application.UseCases.Order.DoCardOrder;
+using AMSeCommerce.Application.UseCases.Order.DoPixOrder;
 using AMSeCommerce.Application.UseCases.Order.GetPayment;
 using AMSeCommerce.Communication.Request.Order;
 using AMSeCommerce.Communication.Response.Order;
@@ -14,7 +15,16 @@ public class OrderController : AmsEcommerceBaseController
     [HttpPost]
     [ProducesResponseType(typeof(ResponseOrderJson), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ErrorMessage), StatusCodes.Status400BadRequest)]
-    public async Task<IActionResult> DoOrder([FromServices] IDoOrderUseCase useCase, [FromBody] RequestOrderJson request)
+    public async Task<IActionResult> DoPixOrder([FromServices] IDoPixOrderUseCase useCase, [FromBody] RequestOrderJson request)
+    {
+        var response = await useCase.Execute(request);
+        return Ok(response);
+    }
+    
+    [HttpPost("card")]
+    [ProducesResponseType(typeof(ResponseOrderJson), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ErrorMessage), StatusCodes.Status400BadRequest)]
+    public async Task<IActionResult> DoCardOrder([FromServices] IDoCardOrderUseCase useCase, [FromBody] RequestOrderJson request)
     {
         var response = await useCase.Execute(request);
         return Ok(response);

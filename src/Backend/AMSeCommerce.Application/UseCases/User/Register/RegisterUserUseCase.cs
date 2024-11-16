@@ -31,7 +31,7 @@ public class RegisterUserUseCase(IUserWriteOnlyRepository repository, IPasswordE
         await _unityOfWork.Commit();
         return new ResponseRegisterUserJson
         {
-            Name = request.Name,
+            Name = request.FirstName,
             Token = new ResponseTokenJson()
             {
                 AccessToken = _tokenGenerator.Generate(user.UserIdentifier)

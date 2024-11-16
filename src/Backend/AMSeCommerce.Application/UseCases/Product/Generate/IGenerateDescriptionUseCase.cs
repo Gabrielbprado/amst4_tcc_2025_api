@@ -1,6 +1,9 @@
+using AMSeCommerce.Communication.Request.GPT;
+using AMSeCommerce.Communication.Response.GPT;
+
 namespace AMSeCommerce.Application.UseCases.Product.Generate;
 
 public interface IGenerateDescriptionUseCase
 {
-    Task<string> Execute(string request);
+    Task<ResponseGenerateDescription> Execute(RequestGenerateDescription request);
 }

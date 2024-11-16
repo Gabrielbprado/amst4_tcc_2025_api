@@ -35,7 +35,7 @@ public class ProductController : AmsEcommerceBaseController
     [HttpGet("{id}")]
     [ProducesResponseType(typeof(ResponseProductJson), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ErrorMessage), StatusCodes.Status400BadRequest)]
-    public async Task<IActionResult> GetFromDashBoard(
+    public async Task<IActionResult> GetById(
         [FromServices] IGetByIdProductUseCase useCase,[FromRoute] long id)
     {
         var response = await useCase.Execute(id);

@@ -1,3 +1,5 @@
+using AMSeCommerce.Communication.Response.Payment;
+
 namespace AMSeCommerce.Domain.Contracts.Order;
 
 public interface IOrderWriteOnlyRepository

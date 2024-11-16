@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AMSeCommerce.Communication")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e851567e63ae74209fc0f584a4579a2a72d0a193")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1300ec930483c47c08ac5943d3f0662ec90f37db")]
 [assembly: System.Reflection.AssemblyProductAttribute("AMSeCommerce.Communication")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AMSeCommerce.Communication")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

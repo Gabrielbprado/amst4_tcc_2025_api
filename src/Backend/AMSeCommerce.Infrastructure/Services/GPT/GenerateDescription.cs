@@ -1,3 +1,5 @@
+using AMSeCommerce.Communication.Request.GPT;
+using AMSeCommerce.Communication.Response.GPT;
 using AMSeCommerce.Domain.Services.GPT;
 using Azure.AI.OpenAI;
 
@@ -7,7 +9,7 @@ public class GenerateDescriptionAi(OpenAIClient openAiClient) : IGenerateDescrip
 {
     private readonly OpenAIClient _openAiApi = openAiClient;
     private const string CHAT_MODEL = "gpt-35-turbo";
-    public async Task<string> GenerateDescription(string request)
+    public async Task<ResponseGenerateDescription> GenerateDescription(RequestGenerateDescription request)
     {
         ChatCompletionsOptions options = new ChatCompletionsOptions()
         {
@@ -18,13 +20,16 @@ public class GenerateDescriptionAi(OpenAIClient openAiClient) : IGenerateDescrip
             FrequencyPenalty = 0,
             PresencePenalty = 0,
         };
-        options.Messages.Add(new ChatMessage(ChatRole.User, request));
+        options.Messages.Add(new ChatMessage(ChatRole.User, request.Title));
 
         var response = await _openAiApi.GetChatCompletionsAsync(deploymentOrModelName: CHAT_MODEL, options);
 
         var completions = response.Value;
         var fullResponse = completions.Choices[0].Message.Content;
         
-        return fullResponse;
+        return new ResponseGenerateDescription()
+            {
+            Description = fullResponse
+        };
     }
 }

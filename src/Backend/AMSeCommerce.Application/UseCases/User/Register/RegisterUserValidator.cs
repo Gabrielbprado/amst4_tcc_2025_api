@@ -10,7 +10,7 @@ public class RegisterUserValidator : AbstractValidator<RequestRegisterUserJson>
     public RegisterUserValidator()
     {
         CascadeMode = CascadeMode.Stop;
-        RuleFor(x => x.Name)
+        RuleFor(x => x.FirstName)
             .NotEmpty()
             .WithMessage(ErrorMessage.NAME_EMPTY);
 

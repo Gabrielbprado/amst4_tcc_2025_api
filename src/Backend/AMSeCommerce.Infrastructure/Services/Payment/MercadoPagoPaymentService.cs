@@ -36,7 +36,7 @@ public class MercadoPagoPaymentService : IPaymentService
                     Number = request.Payer.RequestIdentification.Number,
                 },
             },
-            NotificationUrl = "https://8d9c-2804-3ef4-2c36-1901-19ae-1ac5-a55d-fcca.ngrok-free.app/api/MercadoPago/webhook",
+            NotificationUrl = "https://f117-2804-3ef4-2c36-1901-3155-d6b8-385a-74a0.ngrok-free.app/webhook",
         };
 
         var client = new PaymentClient();
@@ -68,5 +68,5 @@ public class MercadoPagoPaymentService : IPaymentService
                 QrCodeBase64 = payment.PointOfInteraction!.TransactionData!.QrCodeBase64,
                 ExpirationDate = payment.DateOfExpiration!.Value.ToString("dd-MM-yyyy"),
             };
-}
     }
+}
