@@ -12,6 +12,7 @@ public class AmsEcommerceContext(DbContextOptions<AmsEcommerceContext> opts) : D
     public DbSet<Order> Orders { get; set; }
     public DbSet<OrderItem> OrderItems { get; set; }
     public DbSet<ShoppingCart> ShoppingCart { get; set; }
+    public DbSet<Address> Address { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

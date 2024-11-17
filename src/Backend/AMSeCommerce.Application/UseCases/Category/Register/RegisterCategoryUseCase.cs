@@ -4,7 +4,7 @@ using AMSeCommerce.Communication.Response.Category;
 using AMSeCommerce.Domain.Contracts.Category;
 using AutoMapper;
 
-namespace AMSeCommerce.Application.UseCases.Category;
+namespace AMSeCommerce.Application.UseCases.Category.Register;
 
 public class RegisterCategoryUseCase(
     ICategoryWriteOnlyRepository writeOnlyRepository,

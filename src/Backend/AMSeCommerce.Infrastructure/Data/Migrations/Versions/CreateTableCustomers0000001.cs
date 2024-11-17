@@ -13,7 +13,8 @@ public class CreateTableCustomers0000001 : BaseMigration
             .WithColumn("Password").AsString().NotNullable()
             .WithColumn("UserIdentifier").AsGuid().NotNullable() 
             .WithColumn("Email").AsString().NotNullable()
-            .WithColumn("Cpf").AsString().NotNullable(); 
+            .WithColumn("Cpf").AsString().NotNullable()
+            .WithColumn("MercadoPagoUserId").AsString().NotNullable();
     }
 
 }

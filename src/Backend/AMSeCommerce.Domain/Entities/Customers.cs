@@ -9,5 +9,6 @@ public class Customers : BaseEntity
     public string Email { get; set; } = string.Empty;
 
     public string Cpf { get; set; } = string.Empty;
+    public string MercadoPagoUserId { get; set; } = string.Empty;
     public List<Order> Orders { get; set; } = new List<Order>();
 }

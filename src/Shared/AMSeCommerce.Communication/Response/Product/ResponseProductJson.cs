@@ -8,5 +8,5 @@ public class ResponseProductJson
     public decimal Price { get; set; }
     public int StockQuantity { get; set; }
     public long CategoryId { get; set; }
-    public string ImageUrl { get; set; } = string.Empty;
+    public List<ResponseProductImagesJson> Images { get; set; } = [];
 }

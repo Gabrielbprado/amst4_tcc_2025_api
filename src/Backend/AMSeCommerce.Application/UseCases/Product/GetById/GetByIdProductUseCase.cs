@@ -17,7 +17,16 @@ public class GetByIdProductUseCase(IProductReadOnlyRepository readOnlyRepository
         var product = await _readOnlyRepository.GetById(id);
         var user = await _userReadOnlyRepository.GetById(product.UserIdentifier);
         var response = _mapper.Map<ResponseProductJson>(product);
-        response.ImageUrl = await _blobStorageService.GetUri(user, product.ImageIdentifier);
+        var images = await _readOnlyRepository.GetProductImages(product.Id);
+        for (int i = 0; i < images.Count; i++)
+        {
+            var responseProductImage = new ResponseProductImagesJson
+            {
+                ImageUrl = "default"
+            };
+            responseProductImage.ImageUrl = await _blobStorageService.GetUri(user, images[i].ImageUrl);
+            response.Images.Add(responseProductImage);
+        }
         return response;
     }
 }

@@ -11,6 +11,7 @@ public class CategoryRepository(AmsEcommerceContext context) : ICategoryWriteOnl
     public async Task AddCategory(Category category) => await context.Categories.AddAsync(category);
     public async Task<Category?> GetCategoryById(long id) => await context.Categories.FirstAsync(c => c.Id == id);
     public Task<Category?> GetParentCategoryById(long requestParentCategoryId) => context.Categories.AsNoTracking().FirstOrDefaultAsync(c => c.Id == requestParentCategoryId);
+    public async Task<List<Category>> GetAllCategories() => await context.Categories.ToListAsync();
 
     public void UpdateCategory(Category category) => context.Categories.Update(category);
 }

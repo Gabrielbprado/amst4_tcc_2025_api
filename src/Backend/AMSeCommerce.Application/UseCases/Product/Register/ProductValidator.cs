@@ -3,7 +3,7 @@
 using AMSeCommerce.Communication.Request.Product;
 using FluentValidation;
 
-namespace AMSeCommerce.Application.UseCases.Product;
+namespace AMSeCommerce.Application.UseCases.Product.Register;
 
 public class ProductValidator : AbstractValidator<RequestProductJson>
 {
@@ -25,8 +25,8 @@ public class ProductValidator : AbstractValidator<RequestProductJson>
             .GreaterThan(0)
             .WithMessage("CategoryId is required");
 
-        RuleFor(x => x.Image)
-            .NotNull()
+        RuleFor(x => x.Images)
+            .NotEmpty()
             .WithMessage("Image is required");
     }
 }

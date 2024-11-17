@@ -1,5 +1,5 @@
 using AMSeCommerce.Communication.Response.Payment;
-using AMSeCommerce.Domain.Services.Payment;
+using AMSeCommerce.Domain.Services.BankAPI.Payment;
 
 namespace AMSeCommerce.Application.UseCases.Order.GetPayment;
 

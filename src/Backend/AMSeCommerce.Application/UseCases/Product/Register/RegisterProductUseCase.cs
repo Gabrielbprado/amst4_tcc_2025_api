@@ -8,6 +8,7 @@ using AMSeCommerce.Domain.Contracts.Category;
 using AMSeCommerce.Domain.Contracts.Product;
 using AMSeCommerce.Domain.Contracts.Storage;
 using AMSeCommerce.Domain.Contracts.Token;
+using AMSeCommerce.Domain.Entities;
 using AMSeCommerce.Exceptions.BaseExceptions;
 using AutoMapper;
 
@@ -38,17 +39,31 @@ public class RegisterProductUseCase(
         product.UserIdentifier = user.Id;
         product.Category = await _categoryReadOnlyRepository.GetCategoryById(request.CategoryId);
         
-        if (request.Image is not null)
-        {
-            var fileStream = request.Image.OpenReadStream();
-            (var isValidImage, var extension) = fileStream.ValidateAndGetImageExtension();
+      
+            for (int i = 0; i < request.Images.Count; i++)
+            {
+               
+                var productImage = new ProductImage
+                {
+                    Product = product,
+                    ImageUrl = string.Empty,
+                    ProductId = product.Id
+                };
+                
+                if (request.Images is not null)
+                {
+                    var fileStream = request.Images[i].OpenReadStream();
+                    (var isValidImage, var extension) = fileStream.ValidateAndGetImageExtension();
 
-            if (!isValidImage)
-                throw new ErrorOnValidatorException(new List<string> { "Only images are accepted" });
-
-            product.ImageIdentifier = $"{Guid.NewGuid()}{extension}";
-            await _blob.Upload(user,fileStream, product.ImageIdentifier);
-        }
+                    if (!isValidImage)
+                        throw new ErrorOnValidatorException(new List<string> { "Only images are accepted" });
+                    productImage.ImageUrl = $"{Guid.NewGuid()}{extension}";
+                    await _blob.Upload(user,fileStream, productImage.ImageUrl);
+                    await _productRepository.AddProductImages(productImage);
+                }
+            }
+            
+            
 
         await _productRepository.AddProduct(product);
         await _unityOfWork.Commit();

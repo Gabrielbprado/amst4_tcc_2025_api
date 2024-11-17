@@ -5,4 +5,5 @@ public interface ICategoryReadOnlyRepository
     Task<Entities.Category?> GetCategoryById(long id);
 
     Task<Entities.Category?> GetParentCategoryById(long requestParentCategoryId);
+    Task<List<Entities.Category>> GetAllCategories();
 }

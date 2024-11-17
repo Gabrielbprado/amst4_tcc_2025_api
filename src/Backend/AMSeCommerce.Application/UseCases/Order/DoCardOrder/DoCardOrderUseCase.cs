@@ -5,7 +5,7 @@ using AMSeCommerce.Communication.Response.Payment;
 using AMSeCommerce.Domain.Contracts.Order;
 using AMSeCommerce.Domain.Contracts.Product;
 using AMSeCommerce.Domain.Contracts.Token;
-using AMSeCommerce.Domain.Services.Payment;
+using AMSeCommerce.Domain.Services.BankAPI.Payment;
 
 namespace AMSeCommerce.Application.UseCases.Order.DoCardOrder;
 
@@ -21,6 +21,7 @@ public class DoCardOrderUseCase(IOrderWriteOnlyRepository repository,ILoggedUser
         var product = await _productReadOnlyRepository.GetById(request.ProductId);
         var order = new Domain.Entities.Order
         {
+            ProductId = product.Id,
             TransactionAmount = product.Price,
             Description = product.Name,
             ShippingAddress = request.ShippingAddress,
@@ -30,7 +31,7 @@ public class DoCardOrderUseCase(IOrderWriteOnlyRepository repository,ILoggedUser
         order.Description = product.Name;
         var user = await _logged.User();
         order.UserId = user.Id;
-        var requestPix = new RequestCreatePixJson
+        var requestPayment = new RequestCreateCardPaymentJson
         {
             TransactionAmount = order.TransactionAmount,
             Description = order.Description,
@@ -45,10 +46,11 @@ public class DoCardOrderUseCase(IOrderWriteOnlyRepository repository,ILoggedUser
                 },
             },
         };
-        var responsePix = await _paymentService.PixPayment(requestPix);
-        order.PaymentMethodId = responsePix.TransactionId;
+        var responseCard = await _paymentService.CreditCardPayment(requestPayment);
+        order.PaymentMethodId = responseCard.TransactionId;
         await _repository.CreateOrder(order);
         await _unityOfWork.Commit();
-        throw new NotImplementedException();
+        return responseCard;
+        
     }
 }

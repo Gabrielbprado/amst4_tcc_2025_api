@@ -20,16 +20,18 @@ public class GetCartUseCase(IShoppingCartReadOnlyRepository readOnlyRepository,I
         var user = await _loggedUser.User();
         var carts = await _readOnlyRepository.GetCart(user.Id);
         var products = new List<Domain.Entities.Product>();
+        var productImages = new List<Domain.Entities.ProductImage>();
         foreach (var cart in carts)
         {
             var product = await _productReadOnlyRepository.GetById(cart.ProductId);
+            productImages = await _productReadOnlyRepository.GetProductImages(product.Id);
             products.Add(product);
         }
         
         var responseProduct =  _mapper.Map<IList<ResponseProductJson>>(products);
         for (int i = 0; i<responseProduct.Count; i++)
         {
-            responseProduct[i].ImageUrl = await _blobStorageService.GetUri(user, products[i].ImageIdentifier);
+            responseProduct[i].Images[i].ImageUrl = await _blobStorageService.GetUri(user, productImages[i].ImageUrl);
 
         }
         return responseProduct;

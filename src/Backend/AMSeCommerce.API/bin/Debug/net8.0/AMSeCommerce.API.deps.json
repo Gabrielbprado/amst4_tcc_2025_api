@@ -1136,8 +1136,7 @@
       },
       "AMSeCommerce.Domain/1.0.0": {
         "dependencies": {
-          "AMSeCommerce.Communication": "1.0.0",
-          "SQLitePCLRaw.bundle_e_sqlite3": "2.1.10"
+          "AMSeCommerce.Communication": "1.0.0"
         },
         "runtime": {
           "AMSeCommerce.Domain.dll": {}

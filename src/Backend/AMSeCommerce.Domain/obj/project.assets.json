@@ -286,8 +286,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "AMSeCommerce.Communication >= 1.0.0",
-      "SQLitePCLRaw.bundle_e_sqlite3 >= 2.1.10"
+      "AMSeCommerce.Communication >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -330,12 +329,6 @@
     "frameworks": {
       "net8.0": {
         "targetAlias": "net8.0",
-        "dependencies": {
-          "SQLitePCLRaw.bundle_e_sqlite3": {
-            "target": "Package",
-            "version": "[2.1.10, )"
-          }
-        },
         "imports": [
           "net461",
           "net462",

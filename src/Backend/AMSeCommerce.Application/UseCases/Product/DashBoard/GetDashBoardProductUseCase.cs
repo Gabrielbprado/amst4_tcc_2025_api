@@ -15,16 +15,17 @@ public class GetDashBoardProductUseCase(IProductReadOnlyRepository repository,IM
     public async Task<List<ResponseShortProductJson>> Execute()
     {
         var products = await _repository.GetProducts();
+        
         var response =  _mapper.Map<List<ResponseShortProductJson>>(products);
-
         foreach (var responseProduct in response)
         {
-            var product = products.FirstOrDefault(n => n.Id == responseProduct.Id);
             
+            var productImages = await _repository.GetProductImages(responseProduct.Id);
+            var mainImage = productImages.FirstOrDefault(n => n.IsMainImage);
+            var product = products.FirstOrDefault(n => n.Id == responseProduct.Id);
                 var user = await _userReadOnlyRepository.GetById(product.UserIdentifier);
-                responseProduct.ImageUrl = await _blobStorageService.GetUri(user, product.ImageIdentifier);
+                responseProduct.ImageUrl = await _blobStorageService.GetUri(user, mainImage.ImageUrl);
         }
-
         return response;
     }
 }

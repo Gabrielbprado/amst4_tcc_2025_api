@@ -3,6 +3,7 @@ namespace AMSeCommerce.Domain.Entities;
 public class Order : BaseEntity
 {
     public long UserId { get; set; }
+    public long ProductId { get; set; }
     public DateTime OrderDate { get; set; } = DateTime.Now;
     public decimal TransactionAmount { get; set; }
     public string Description { get; set; } = string.Empty;
