@@ -89,6 +89,8 @@ public class MercadoPagoPaymentService : IPaymentService
 
         var client = new PaymentClient();
         MercadoPago.Resource.Payment.Payment payment = await client.CreateAsync(paymentRequest, requestOptions);
+        Console.WriteLine(payment.TransactionDetails.ExternalResourceUrl);
+
         return new ResponseBoletoJson
         {
             TransactionId = payment.Id!.Value,
@@ -121,6 +123,7 @@ public class MercadoPagoPaymentService : IPaymentService
         var client = new PaymentClient();
         MercadoPago.Resource.Payment.Payment payment = await client.CreateAsync(paymentRequest, requestOptions);
         Console.WriteLine(payment.Status);
+        Console.WriteLine(payment.TransactionDetails.ExternalResourceUrl);
         return new ResponseCardJson
         {
             TransactionId = payment.Id!.Value,

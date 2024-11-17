@@ -9,6 +9,9 @@ public class ProductRepository(AmsEcommerceContext context) : IProductWriteOnlyR
 {
     public async Task AddProduct(Product product) => await context.Products.AddAsync(product);
     public async Task AddProductImages(ProductImage productImage) => await context.ProductImages.AddAsync(productImage);
+    public void UpdateProduct(Product product) => context.Products.Update(product);
+    public void UpdateProductImages(ProductImage productImage) => context.ProductImages.Update(productImage);
+
     public async Task<List<Product>> GetProducts() => await context.Products.ToListAsync();
     public async Task<Product> GetById(long requestProductId) => await context.Products.FirstOrDefaultAsync(x => x.Id == requestProductId);
     public async Task<List<Product>> GetProductsBySeller(long id) => await context.Products.Where(p => p.UserIdentifier == id).ToListAsync();

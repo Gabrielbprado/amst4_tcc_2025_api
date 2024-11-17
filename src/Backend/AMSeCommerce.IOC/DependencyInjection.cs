@@ -13,6 +13,8 @@ using AMSeCommerce.Application.UseCases.Order.DoCardOrder;
 using AMSeCommerce.Application.UseCases.Order.DoPixOrder;
 using AMSeCommerce.Application.UseCases.Order.GetOrders;
 using AMSeCommerce.Application.UseCases.Order.GetPayment;
+using AMSeCommerce.Application.UseCases.Order.GetPaymentMethod;
+using AMSeCommerce.Application.UseCases.Order.UpdateStatus;
 using AMSeCommerce.Application.UseCases.Product;
 using AMSeCommerce.Application.UseCases.Product.DashBoard;
 using AMSeCommerce.Application.UseCases.Product.Generate;
@@ -20,6 +22,7 @@ using AMSeCommerce.Application.UseCases.Product.GetByCategory;
 using AMSeCommerce.Application.UseCases.Product.GetById;
 using AMSeCommerce.Application.UseCases.Product.GetBySeller;
 using AMSeCommerce.Application.UseCases.Product.Register;
+using AMSeCommerce.Application.UseCases.Product.Update;
 using AMSeCommerce.Application.UseCases.ShoppingCart.AddItem;
 using AMSeCommerce.Application.UseCases.ShoppingCart.Delete;
 using AMSeCommerce.Application.UseCases.ShoppingCart.Get;
@@ -36,6 +39,7 @@ using AMSeCommerce.Domain.Contracts.Storage;
 using AMSeCommerce.Domain.Contracts.Token;
 using AMSeCommerce.Domain.Contracts.User;
 using AMSeCommerce.Domain.Entities;
+using AMSeCommerce.Domain.Services.BankAPI.GetPaymentMethod;
 using AMSeCommerce.Domain.Services.BankAPI.Payment;
 using AMSeCommerce.Domain.Services.BankAPI.RegisterUser;
 using AMSeCommerce.Domain.Services.GPT;
@@ -44,6 +48,7 @@ using AMSeCommerce.Infrastructure.Repositories;
 using AMSeCommerce.Infrastructure.Security.Encrypter;
 using AMSeCommerce.Infrastructure.Security.Token.Access.Generate;
 using AMSeCommerce.Infrastructure.Security.Token.Access.Validate;
+using AMSeCommerce.Infrastructure.Services.BankAPI.GetPaymentMethod;
 using AMSeCommerce.Infrastructure.Services.BankAPI.Payment;
 using AMSeCommerce.Infrastructure.Services.BankAPI.RegisterUser;
 using AMSeCommerce.Infrastructure.Services.GPT;
@@ -115,7 +120,11 @@ public static class DependencyInjection
         services.AddScoped<IOrderReadOnlyRepository, OrderRepository>();
         services.AddScoped<IAddAddressUseCase, AddAddressUseCase>();
         services.AddScoped<IAddressWriteOnlyRepository, AddressRepository>();
-
+        services.AddScoped<IAddressReadOnlyRepository, AddressRepository>();
+        services.AddScoped<IGetPaymentMethodOnBank, GetPaymentMethodOnMercadoPago>();
+        services.AddScoped<IGetPaymentMethodUseCase, GetPaymentMethodUseCase>();
+        services.AddScoped<IUpdateOrderUseCase, UpdateOrderUseCase>();
+        services.AddScoped<IUpdateProductUseCase, UpdateProductUseCase>();
     }
     
     private static void AddAzureBlob(IServiceCollection serviceCollection, IConfiguration configuration)

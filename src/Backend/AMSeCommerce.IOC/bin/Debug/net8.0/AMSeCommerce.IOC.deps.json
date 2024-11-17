@@ -1072,6 +1072,7 @@
       },
       "AMSeCommerce.Communication/1.0.0": {
         "dependencies": {
+          "Newtonsoft.Json": "13.0.1",
           "SQLitePCLRaw.bundle_e_sqlite3": "2.1.10"
         },
         "runtime": {

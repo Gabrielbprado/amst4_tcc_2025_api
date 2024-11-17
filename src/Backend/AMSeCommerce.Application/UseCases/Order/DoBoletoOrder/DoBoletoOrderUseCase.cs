@@ -2,6 +2,7 @@ using AMS_News.Domain.Contracts;
 using AMSeCommerce.Communication.Request.Order;
 using AMSeCommerce.Communication.Request.Payment;
 using AMSeCommerce.Communication.Response.Payment;
+using AMSeCommerce.Domain.Contracts.Address;
 using AMSeCommerce.Domain.Contracts.Order;
 using AMSeCommerce.Domain.Contracts.Product;
 using AMSeCommerce.Domain.Contracts.Token;
@@ -9,13 +10,14 @@ using AMSeCommerce.Domain.Services.BankAPI.Payment;
 
 namespace AMSeCommerce.Application.UseCases.Order.DoBoletoOrder;
 
-public class DoBoletoOrderUseCase(IOrderWriteOnlyRepository repository,ILoggedUser logged,IUnityOfWork unityOfWork,IPaymentService paymentService,IProductReadOnlyRepository productReadOnlyRepository) : IDoBoletoOrderUseCase
+public class DoBoletoOrderUseCase(IOrderWriteOnlyRepository repository,ILoggedUser logged,IUnityOfWork unityOfWork,IPaymentService paymentService,IProductReadOnlyRepository productReadOnlyRepository,IAddressReadOnlyRepository addressReadOnlyRepository) : IDoBoletoOrderUseCase
 {
     private readonly IOrderWriteOnlyRepository _repository = repository;
     private readonly ILoggedUser _logged = logged;
     private readonly IUnityOfWork _unityOfWork = unityOfWork;
     private readonly IPaymentService _paymentService = paymentService;
     private readonly IProductReadOnlyRepository _productReadOnlyRepository = productReadOnlyRepository;
+    private readonly IAddressReadOnlyRepository _addressReadOnlyRepository = addressReadOnlyRepository;
     public async Task<ResponseBoletoJson> Execute(RequestOrderJson request)
     {
         var product = await _productReadOnlyRepository.GetById(request.ProductId);
@@ -30,6 +32,7 @@ public class DoBoletoOrderUseCase(IOrderWriteOnlyRepository repository,ILoggedUs
         order.TransactionAmount = product.Price;
         order.Description = product.Name;
         var user = await _logged.User();
+        var address = await _addressReadOnlyRepository.GetAsync(user.Id);
         order.UserId = user.Id;
         var requestBoleto = new RequestCreateBoletoJson
         {
@@ -47,19 +50,19 @@ public class DoBoletoOrderUseCase(IOrderWriteOnlyRepository repository,ILoggedUs
             },
             Address = new RequestAdress
             {
-                City = "São Paulo",
-                FederalUnit = "SP",
-                Neighborhood = "Jardim Paulista",
-                StreetName = "Avenida Paulista",
-                ZipCode = "01310-100",
-                StreetNumber = "77"
+                City = address.City,
+                FederalUnit = address.State,
+                Neighborhood = address.Neighborhood,
+                StreetName = address.StreetName,
+                ZipCode = address.ZipCode,
+                StreetNumber = address.StreetNumber.ToString()
             }
             
         };
-        var responsePix = await _paymentService.BoletoPayment(requestBoleto);
-        order.PaymentMethodId = responsePix.TransactionId;
+        var responseBoleto = await _paymentService.BoletoPayment(requestBoleto);
+        order.PaymentMethodId = responseBoleto.TransactionId;
         await _repository.CreateOrder(order);
         await _unityOfWork.Commit();
-        return responsePix;
+        return responseBoleto;
     }
 }

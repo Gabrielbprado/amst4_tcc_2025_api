@@ -1,8 +1,12 @@
+using AMSeCommerce.API.Attribute;
 using AMSeCommerce.Application.UseCases.Order.DoBoletoOrder;
 using AMSeCommerce.Application.UseCases.Order.DoCardOrder;
 using AMSeCommerce.Application.UseCases.Order.DoPixOrder;
 using AMSeCommerce.Application.UseCases.Order.GetOrders;
 using AMSeCommerce.Application.UseCases.Order.GetPayment;
+using AMSeCommerce.Application.UseCases.Order.GetPaymentMethod;
+using AMSeCommerce.Application.UseCases.Order.UpdateStatus;
+using AMSeCommerce.Communication.Request.BankAPI;
 using AMSeCommerce.Communication.Request.Order;
 using AMSeCommerce.Communication.Response.Order;
 using AMSeCommerce.Communication.Response.Payment;
@@ -50,11 +54,32 @@ public class OrderController : AmsEcommerceBaseController
     }
     
     [HttpGet("my-orders")]
-    [ProducesResponseType(typeof(ResponsePixJson), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ResponseOrderJson), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ErrorMessage), StatusCodes.Status400BadRequest)]
-    public async Task<IActionResult> GetPayment([FromServices] IGetOrdersUseCase useCase)
+    [AuthenticatedUser]
+    public async Task<IActionResult> GetOrders([FromServices] IGetOrdersUseCase useCase)
     {
         var response = await useCase.Execute();
         return Ok(response);
+    }
+    
+    [HttpGet("my-payments-method")]
+    [ProducesResponseType(typeof(ResponseCardInfoJson), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ErrorMessage), StatusCodes.Status400BadRequest)]
+    [AuthenticatedUser]
+    public async Task<IActionResult> GetPaymentMethod([FromServices] IGetPaymentMethodUseCase useCase)
+    {
+        var response = await useCase.Execute();
+        return Ok(response);
+    }
+    
+    [HttpPut]
+    [ProducesResponseType(typeof(ResponseCardInfoJson), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ErrorMessage), StatusCodes.Status400BadRequest)]
+    [AuthenticatedUser]
+    public async Task<IActionResult> UpdateStatusOrder([FromServices] IUpdateOrderUseCase useCase,[FromBody] RequestChangeStatus status)
+    {
+        await useCase.Execute(status);
+        return NoContent();
     }
 }

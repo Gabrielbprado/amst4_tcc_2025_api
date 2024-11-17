@@ -58,11 +58,13 @@ public class RegisterProductUseCase(
                     if (!isValidImage)
                         throw new ErrorOnValidatorException(new List<string> { "Only images are accepted" });
                     productImage.ImageUrl = $"{Guid.NewGuid()}{extension}";
+                    if (i == 0)
+                        productImage.IsMainImage = true;
                     await _blob.Upload(user,fileStream, productImage.ImageUrl);
+                    
                     await _productRepository.AddProductImages(productImage);
                 }
             }
-            
             
 
         await _productRepository.AddProduct(product);

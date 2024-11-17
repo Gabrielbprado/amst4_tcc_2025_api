@@ -5,6 +5,7 @@ using AMSeCommerce.Application.UseCases.Product.GetByCategory;
 using AMSeCommerce.Application.UseCases.Product.GetById;
 using AMSeCommerce.Application.UseCases.Product.GetBySeller;
 using AMSeCommerce.Application.UseCases.Product.Register;
+using AMSeCommerce.Application.UseCases.Product.Update;
 using AMSeCommerce.Communication.Request.Product;
 using AMSeCommerce.Communication.Response.Product;
 using AMSeCommerce.Exceptions;
@@ -63,5 +64,16 @@ public class ProductController : AmsEcommerceBaseController
     {
         var response = await useCase.Execute(categoryId);
         return Ok(response);
+    }
+    
+    [HttpPut]
+    [ProducesResponseType(typeof(ResponseShortProductJson), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ErrorMessage), StatusCodes.Status400BadRequest)]
+    [AuthenticatedUser]
+    public async Task<IActionResult> UpdateProduct(
+        [FromServices] IUpdateProductUseCase useCase,[FromForm] RequestProductJson requestProductJson)
+    {
+        await useCase.Execute(requestProductJson);
+        return NoContent();
     }
 }
