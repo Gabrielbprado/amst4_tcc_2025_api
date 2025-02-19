@@ -3,7 +3,7 @@ name: Build and Deploy Docker Image
 on:
   push:
     branches:
-      - master  # ou main, dependendo do nome da sua branch principal
+      - master # ou main, dependendo do nome da sua branch principal
 
 jobs:
   build:
@@ -25,14 +25,15 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ghcr.io/${{ github.actor }}/${{ github.repository }}:latest .
+          docker build -t ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:latest .
 
       - name: Log in to GitHub Container Registry
         uses: docker/login-action@v2
         with:
+          registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Push Docker image
         run: |
-          docker push ghcr.io/${{ github.actor }}/${{ github.repository }}:latest
+          docker push ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:latest
