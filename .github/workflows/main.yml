@@ -37,6 +37,3 @@ jobs:
       run: |
         docker push ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPO }}:latest
 
-    - name: Deploy to Azure (optional, caso tenha uma Web App ou AKS)
-      run: |
-        az webapp config container set --name <nome_do_app_azure> --resource-group <nome_do_grupo_de_recursos> --docker-custom-image-name ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPO }}:latest --docker-registry-server-url https://index.docker.io
