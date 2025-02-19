@@ -22,7 +22,7 @@ jobs:
         run: echo "REPOSITORY_NAME_LOWER=$(echo ${{ github.event.repository.name }} | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
       - name: Build Docker image
         run: |
-          docker build -t ghcr.io/${{ github.repository_owner }}/${{ env.REPOSITORY_NAME_LOWER }}:latest .
+          docker build -t ghcr.io/gabrielbprado/${{ env.REPOSITORY_NAME_LOWER }}:latest .
       - name: Log in to GitHub Container Registry
         uses: docker/login-action@v2
         with:
@@ -31,4 +31,4 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Push Docker image
         run: |
-          docker push ghcr.io/${{ github.repository_owner }}/${{ env.REPOSITORY_NAME_LOWER }}:latest
+          docker push ghcr.io/gabrielbprado/${{ env.REPOSITORY_NAME_LOWER }}:latest
