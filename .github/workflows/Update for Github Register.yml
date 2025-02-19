@@ -28,7 +28,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GHCR_PAT }}
+          password: ${{ secrets.GHCR_PAT2 }}
       - name: Push Docker image
         run: |
           docker push ghcr.io/gabrielbprado/${{ env.REPOSITORY_NAME_LOWER }}:latest
