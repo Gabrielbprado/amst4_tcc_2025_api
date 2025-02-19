@@ -38,7 +38,6 @@ public class UpdateProductUseCase(
       
 
         product.UserIdentifier = user.Id;
-        product.Category = await _categoryReadOnlyRepository.GetCategoryById(request.CategoryId);
         product.Name = request.Name;
         product.Description = request.Description;
         product.Price = request.Price;
@@ -74,7 +73,6 @@ public class UpdateProductUseCase(
                  _productRepository.UpdateProductImages(productImage); // Atualiza ou adiciona as novas imagens
             }
         }
-
          _productRepository.UpdateProduct(product);
         await _unityOfWork.Commit();
     }

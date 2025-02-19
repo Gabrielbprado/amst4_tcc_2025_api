@@ -6,6 +6,7 @@ using AMSeCommerce.Communication.Request.ShoppingCart;
 using AMSeCommerce.Communication.Request.User;
 using AMSeCommerce.Communication.Response.Address;
 using AMSeCommerce.Communication.Response.Category;
+using AMSeCommerce.Communication.Response.Home;
 using AMSeCommerce.Communication.Response.Order;
 using AMSeCommerce.Communication.Response.Product;
 using AMSeCommerce.Domain.Entities;
@@ -33,6 +34,7 @@ public class AutoMapperProfile : Profile
         CreateMap<Order, ResponseOrderJson>();
         CreateMap<RequestAddressJson,Address>();
         CreateMap<Address,ResponseAddressJson>();
+        CreateMap<HomeSection, ResponseHomeSectionJson>();
 
     }    
 }

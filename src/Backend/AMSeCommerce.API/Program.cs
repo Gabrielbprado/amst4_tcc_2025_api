@@ -70,6 +70,7 @@ app.MapControllers();
 app.UseHttpsRedirection();
 
 AddDatabase();
+app.Urls.Add("http://+:8080");
 app.Run();
 
 

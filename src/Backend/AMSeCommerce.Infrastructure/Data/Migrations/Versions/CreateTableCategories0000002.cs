@@ -8,8 +8,6 @@ public class CreateTableCategories0000002 : BaseMigration
     public override void Up()
     {
         CreateTable("Categories")
-            .WithColumn("Description").AsString().Nullable()
-            .WithColumn("ParentCategoryId").AsInt64().Nullable()
-            .ForeignKey("FK_Categories_ParentCategory", "Categories", "Id");
+            .WithColumn("Description").AsString().Nullable();
     }
 }

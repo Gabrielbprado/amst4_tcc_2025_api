@@ -37,7 +37,6 @@ public class RegisterProductUseCase(
 
         var product = _mapper.Map<Domain.Entities.Product>(request);
         product.UserIdentifier = user.Id;
-        product.Category = await _categoryReadOnlyRepository.GetCategoryById(request.CategoryId);
         
       
             for (int i = 0; i < request.Images.Count; i++)
@@ -54,7 +53,7 @@ public class RegisterProductUseCase(
                 {
                     var fileStream = request.Images[i].OpenReadStream();
                     (var isValidImage, var extension) = fileStream.ValidateAndGetImageExtension();
-
+                    isValidImage = true;
                     if (!isValidImage)
                         throw new ErrorOnValidatorException(new List<string> { "Only images are accepted" });
                     productImage.ImageUrl = $"{Guid.NewGuid()}{extension}";

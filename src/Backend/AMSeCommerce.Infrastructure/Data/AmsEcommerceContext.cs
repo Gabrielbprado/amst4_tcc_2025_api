@@ -13,9 +13,14 @@ public class AmsEcommerceContext(DbContextOptions<AmsEcommerceContext> opts) : D
     public DbSet<OrderItem> OrderItems { get; set; }
     public DbSet<ShoppingCart> ShoppingCart { get; set; }
     public DbSet<Address> Address { get; set; }
+    public DbSet<HomeSectionImages> HomeSectionImage { get; set; }
+
+    public DbSet<HomeSection> HomeSection { get; set; }
+    public DbSet<ParentCategory> ParentCategory { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(AmsEcommerceContext).Assembly);
+        
     }
 }

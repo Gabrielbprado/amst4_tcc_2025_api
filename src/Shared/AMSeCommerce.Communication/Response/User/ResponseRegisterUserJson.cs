@@ -4,6 +4,6 @@ namespace AMS_News.Communication.Response.User;
 
 public class ResponseRegisterUserJson
 {
-    public string Name { get; set; } = string.Empty;
+    public string FirstName { get; set; } = string.Empty;
     public ResponseTokenJson Token { get; set; } = null!;
 }

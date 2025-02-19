@@ -10,4 +10,7 @@ public abstract class MigrationVersionNumber
     public const int CreateTableOrdersItems = 6;
     public const int CreateTableShoppingCart = 7;
     public const int CreateTableAddress = 8;
+    public const int CreateHomeSectionTable = 9;
+    public const int CreateHomeSectionImagesTable = 10;
+    public const int CreateTableParentCategory = 11;
 }

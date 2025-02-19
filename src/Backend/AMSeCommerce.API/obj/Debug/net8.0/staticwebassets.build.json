@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "Xi29C3YpnIgslYDne9cCBGjim0qP4Tarrro4zCnxP0E=",
+  "Hash": "USOI3f7N+Ag/6IcjT2V71N9J79bZPvR/qaMVhjHKuLY=",
   "Source": "AMSeCommerce.API",
   "BasePath": "_content/AMSeCommerce.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

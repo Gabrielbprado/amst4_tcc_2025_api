@@ -22,15 +22,6 @@ public class RegisterCategoryUseCase(
     {
         var category = _mapper.Map<Domain.Entities.Category>(request);
 
-        if (request.ParentCategoryId.HasValue)
-        {
-            var parentCategory = await _readOnlyRepository.GetParentCategoryById(request.ParentCategoryId.Value);
-            if (parentCategory == null)
-                throw new Exception("Parent category not found");
-            
-            category.ParentCategory = parentCategory;
-        }
-
         await _writeOnlyRepository.AddCategory(category);
         await _unityOfWork.Commit();
 

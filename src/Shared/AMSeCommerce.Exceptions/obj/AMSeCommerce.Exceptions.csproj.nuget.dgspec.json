@@ -1,25 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Shared\\AMSeCommerce.Exceptions\\AMSeCommerce.Exceptions.csproj": {}
+    "/home/prado/Downloads/Tcc/eCommerce_API/src/Shared/AMSeCommerce.Exceptions/AMSeCommerce.Exceptions.csproj": {}
   },
   "projects": {
-    "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Shared\\AMSeCommerce.Exceptions\\AMSeCommerce.Exceptions.csproj": {
+    "/home/prado/Downloads/Tcc/eCommerce_API/src/Shared/AMSeCommerce.Exceptions/AMSeCommerce.Exceptions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Shared\\AMSeCommerce.Exceptions\\AMSeCommerce.Exceptions.csproj",
+        "projectUniqueName": "/home/prado/Downloads/Tcc/eCommerce_API/src/Shared/AMSeCommerce.Exceptions/AMSeCommerce.Exceptions.csproj",
         "projectName": "AMSeCommerce.Exceptions",
-        "projectPath": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Shared\\AMSeCommerce.Exceptions\\AMSeCommerce.Exceptions.csproj",
-        "packagesPath": "C:\\Users\\guard\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Shared\\AMSeCommerce.Exceptions\\obj\\",
+        "projectPath": "/home/prado/Downloads/Tcc/eCommerce_API/src/Shared/AMSeCommerce.Exceptions/AMSeCommerce.Exceptions.csproj",
+        "packagesPath": "/home/prado/.nuget/packages/",
+        "outputPath": "/home/prado/Downloads/Tcc/eCommerce_API/src/Shared/AMSeCommerce.Exceptions/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\guard\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/prado/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "/usr/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -32,17 +33,17 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "SQLitePCLRaw.bundle_e_sqlite3": {
-              "target": "Package",
-              "version": "[2.1.10, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -59,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

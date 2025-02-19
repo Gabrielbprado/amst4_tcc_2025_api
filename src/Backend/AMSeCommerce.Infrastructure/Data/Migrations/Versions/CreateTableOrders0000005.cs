@@ -8,7 +8,7 @@ public class CreateTableOrders0000005 : BaseMigration
     public override void Up()
     {
         CreateTable("Orders")
-            .WithColumn("UserId").AsGuid().NotNullable()
+            .WithColumn("UserId").AsInt64().NotNullable()
             .ForeignKey("FK_Orders_Customers", "Customers", "Id")
             .WithColumn("OrderDate").AsDateTime().NotNullable()
             .WithColumn("TransactionAmount").AsDecimal(18, 2).NotNullable()

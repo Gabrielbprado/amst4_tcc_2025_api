@@ -7,6 +7,7 @@ using AMSeCommerce.Application.UseCases.Address;
 using AMSeCommerce.Application.UseCases.Category;
 using AMSeCommerce.Application.UseCases.Category.Get;
 using AMSeCommerce.Application.UseCases.Category.Register;
+using AMSeCommerce.Application.UseCases.Home;
 using AMSeCommerce.Application.UseCases.Login;
 using AMSeCommerce.Application.UseCases.Order.DoBoletoOrder;
 using AMSeCommerce.Application.UseCases.Order.DoCardOrder;
@@ -32,6 +33,7 @@ using AMSeCommerce.Application.UseCases.User.Register;
 using AMSeCommerce.Application.UseCases.User.Update;
 using AMSeCommerce.Domain.Contracts.Address;
 using AMSeCommerce.Domain.Contracts.Category;
+using AMSeCommerce.Domain.Contracts.Home;
 using AMSeCommerce.Domain.Contracts.Order;
 using AMSeCommerce.Domain.Contracts.Product;
 using AMSeCommerce.Domain.Contracts.ShoppingCart;
@@ -60,6 +62,7 @@ using Azure.AI.OpenAI;
 using Azure.Storage.Blobs;
 using FluentMigrator.Runner;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -125,6 +128,8 @@ public static class DependencyInjection
         services.AddScoped<IGetPaymentMethodUseCase, GetPaymentMethodUseCase>();
         services.AddScoped<IUpdateOrderUseCase, UpdateOrderUseCase>();
         services.AddScoped<IUpdateProductUseCase, UpdateProductUseCase>();
+        services.AddScoped<IHomeSectionsUseCase, HomeSectionsUseCase>();
+        services.AddScoped<IHomeSectionReadOnlyRepository, HomeRepository>();
     }
     
     private static void AddAzureBlob(IServiceCollection serviceCollection, IConfiguration configuration)
@@ -150,7 +155,7 @@ public static class DependencyInjection
         var connectionString = configuration.GetConnectionString("DefaultConnection");
         services.AddDbContext<AmsEcommerceContext>(opts =>
         {
-            opts.UseSqlite(connectionString);
+            opts.UseSqlServer(connectionString);
         });
     }
     
@@ -169,7 +174,7 @@ public static class DependencyInjection
 
         service.AddFluentMigratorCore()
             .ConfigureRunner(rb => rb
-                .AddSQLite()
+                .AddSqlServer()
                 .WithGlobalConnectionString(connectionString)
                 .ScanIn(Assembly.Load("AMSeCommerce.Infrastructure")).For.Migrations());
     }
@@ -179,7 +184,13 @@ public static class DependencyInjection
         var expirationTokenInMinutes = configuration.GetValue<uint>("Settings:JwtToken:ExpirationTokenInMinutes");
         var signKey = configuration.GetValue<string>("Settings:JwtToken:SignKey");
 
-        service.AddScoped<ITokenGenerator>(option => new JwtAccessTokenGenerator(expirationTokenInMinutes, signKey!));
+        service.AddScoped<ITokenGenerator>(serviceProvider =>
+            new JwtAccessTokenGenerator(
+                expirationTokenInMinutes,
+                signKey,
+                serviceProvider.GetRequiredService<IHttpContextAccessor>()
+            )
+        );
         service.AddScoped<ITokenValidator>(option => new JwtTokenValidator(signKey!));
         service.AddScoped<ILoggedUser, LoggedUser>();
     }

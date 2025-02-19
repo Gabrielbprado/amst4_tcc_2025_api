@@ -12,7 +12,7 @@ public class ProductRepository(AmsEcommerceContext context) : IProductWriteOnlyR
     public void UpdateProduct(Product product) => context.Products.Update(product);
     public void UpdateProductImages(ProductImage productImage) => context.ProductImages.Update(productImage);
 
-    public async Task<List<Product>> GetProducts() => await context.Products.ToListAsync();
+    public async Task<List<Product>> GetProducts() => await context.Products.Include(x => x.Category.ParentCategories).Where(x => x.IsActive).ToListAsync();
     public async Task<Product> GetById(long requestProductId) => await context.Products.FirstOrDefaultAsync(x => x.Id == requestProductId);
     public async Task<List<Product>> GetProductsBySeller(long id) => await context.Products.Where(p => p.UserIdentifier == id).ToListAsync();
     public async Task<List<ProductImage>> GetProductImages(long productId) => await context.ProductImages.Where(p => p.ProductId == productId).ToListAsync();

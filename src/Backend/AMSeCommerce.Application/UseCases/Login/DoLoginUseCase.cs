@@ -26,7 +26,7 @@ public class DoLoginUseCase(IPasswordEncrypter encrypter,IUserReadOnlyRepository
         }
         return new ResponseRegisterUserJson
         {
-            Name = user.FirstName,
+            FirstName = user.FirstName,
             Token = new ResponseTokenJson()
             {
                 AccessToken = _tokenGenerator.Generate(user.UserIdentifier)

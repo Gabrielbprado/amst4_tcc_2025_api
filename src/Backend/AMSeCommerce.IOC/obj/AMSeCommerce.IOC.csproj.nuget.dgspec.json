@@ -1,39 +1,40 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Backend\\AMSeCommerce.IOC\\AMSeCommerce.IOC.csproj": {}
+    "/home/prado/Downloads/Tcc/eCommerce_API/src/Backend/AMSeCommerce.IOC/AMSeCommerce.IOC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Backend\\AMSeCommerce.Application\\AMSeCommerce.Application.csproj": {
+    "/home/prado/Downloads/Tcc/eCommerce_API/src/Backend/AMSeCommerce.Application/AMSeCommerce.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Backend\\AMSeCommerce.Application\\AMSeCommerce.Application.csproj",
+        "projectUniqueName": "/home/prado/Downloads/Tcc/eCommerce_API/src/Backend/AMSeCommerce.Application/AMSeCommerce.Application.csproj",
         "projectName": "AMSeCommerce.Application",
-        "projectPath": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Backend\\AMSeCommerce.Application\\AMSeCommerce.Application.csproj",
-        "packagesPath": "C:\\Users\\guard\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Backend\\AMSeCommerce.Application\\obj\\",
+        "projectPath": "/home/prado/Downloads/Tcc/eCommerce_API/src/Backend/AMSeCommerce.Application/AMSeCommerce.Application.csproj",
+        "packagesPath": "/home/prado/.nuget/packages/",
+        "outputPath": "/home/prado/Downloads/Tcc/eCommerce_API/src/Backend/AMSeCommerce.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\guard\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/prado/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "/usr/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Backend\\AMSeCommerce.Domain\\AMSeCommerce.Domain.csproj": {
-                "projectPath": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Backend\\AMSeCommerce.Domain\\AMSeCommerce.Domain.csproj"
+              "/home/prado/Downloads/Tcc/eCommerce_API/src/Backend/AMSeCommerce.Domain/AMSeCommerce.Domain.csproj": {
+                "projectPath": "/home/prado/Downloads/Tcc/eCommerce_API/src/Backend/AMSeCommerce.Domain/AMSeCommerce.Domain.csproj"
               },
-              "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Shared\\AMSeCommerce.Communication\\AMSeCommerce.Communication.csproj": {
-                "projectPath": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Shared\\AMSeCommerce.Communication\\AMSeCommerce.Communication.csproj"
+              "/home/prado/Downloads/Tcc/eCommerce_API/src/Shared/AMSeCommerce.Communication/AMSeCommerce.Communication.csproj": {
+                "projectPath": "/home/prado/Downloads/Tcc/eCommerce_API/src/Shared/AMSeCommerce.Communication/AMSeCommerce.Communication.csproj"
               },
-              "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Shared\\AMSeCommerce.Exceptions\\AMSeCommerce.Exceptions.csproj": {
-                "projectPath": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Shared\\AMSeCommerce.Exceptions\\AMSeCommerce.Exceptions.csproj"
+              "/home/prado/Downloads/Tcc/eCommerce_API/src/Shared/AMSeCommerce.Exceptions/AMSeCommerce.Exceptions.csproj": {
+                "projectPath": "/home/prado/Downloads/Tcc/eCommerce_API/src/Shared/AMSeCommerce.Exceptions/AMSeCommerce.Exceptions.csproj"
               }
             }
           }
@@ -42,7 +43,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -59,10 +66,6 @@
             "FluentValidation": {
               "target": "Package",
               "version": "[11.10.0, )"
-            },
-            "SQLitePCLRaw.bundle_e_sqlite3": {
-              "target": "Package",
-              "version": "[2.1.10, )"
             }
           },
           "imports": [
@@ -81,34 +84,35 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Backend\\AMSeCommerce.Domain\\AMSeCommerce.Domain.csproj": {
+    "/home/prado/Downloads/Tcc/eCommerce_API/src/Backend/AMSeCommerce.Domain/AMSeCommerce.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Backend\\AMSeCommerce.Domain\\AMSeCommerce.Domain.csproj",
+        "projectUniqueName": "/home/prado/Downloads/Tcc/eCommerce_API/src/Backend/AMSeCommerce.Domain/AMSeCommerce.Domain.csproj",
         "projectName": "AMSeCommerce.Domain",
-        "projectPath": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Backend\\AMSeCommerce.Domain\\AMSeCommerce.Domain.csproj",
-        "packagesPath": "C:\\Users\\guard\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Backend\\AMSeCommerce.Domain\\obj\\",
+        "projectPath": "/home/prado/Downloads/Tcc/eCommerce_API/src/Backend/AMSeCommerce.Domain/AMSeCommerce.Domain.csproj",
+        "packagesPath": "/home/prado/.nuget/packages/",
+        "outputPath": "/home/prado/Downloads/Tcc/eCommerce_API/src/Backend/AMSeCommerce.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\guard\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/prado/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "/usr/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Shared\\AMSeCommerce.Communication\\AMSeCommerce.Communication.csproj": {
-                "projectPath": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Shared\\AMSeCommerce.Communication\\AMSeCommerce.Communication.csproj"
+              "/home/prado/Downloads/Tcc/eCommerce_API/src/Shared/AMSeCommerce.Communication/AMSeCommerce.Communication.csproj": {
+                "projectPath": "/home/prado/Downloads/Tcc/eCommerce_API/src/Shared/AMSeCommerce.Communication/AMSeCommerce.Communication.csproj"
               }
             }
           }
@@ -117,7 +121,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -138,37 +148,38 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Backend\\AMSeCommerce.Infrastructure\\AMSeCommerce.Infrastructure.csproj": {
+    "/home/prado/Downloads/Tcc/eCommerce_API/src/Backend/AMSeCommerce.IOC/AMSeCommerce.IOC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Backend\\AMSeCommerce.Infrastructure\\AMSeCommerce.Infrastructure.csproj",
-        "projectName": "AMSeCommerce.Infrastructure",
-        "projectPath": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Backend\\AMSeCommerce.Infrastructure\\AMSeCommerce.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\guard\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Backend\\AMSeCommerce.Infrastructure\\obj\\",
+        "projectUniqueName": "/home/prado/Downloads/Tcc/eCommerce_API/src/Backend/AMSeCommerce.IOC/AMSeCommerce.IOC.csproj",
+        "projectName": "AMSeCommerce.IOC",
+        "projectPath": "/home/prado/Downloads/Tcc/eCommerce_API/src/Backend/AMSeCommerce.IOC/AMSeCommerce.IOC.csproj",
+        "packagesPath": "/home/prado/.nuget/packages/",
+        "outputPath": "/home/prado/Downloads/Tcc/eCommerce_API/src/Backend/AMSeCommerce.IOC/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\guard\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/prado/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "/usr/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Backend\\AMSeCommerce.Domain\\AMSeCommerce.Domain.csproj": {
-                "projectPath": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Backend\\AMSeCommerce.Domain\\AMSeCommerce.Domain.csproj"
+              "/home/prado/Downloads/Tcc/eCommerce_API/src/Backend/AMSeCommerce.Application/AMSeCommerce.Application.csproj": {
+                "projectPath": "/home/prado/Downloads/Tcc/eCommerce_API/src/Backend/AMSeCommerce.Application/AMSeCommerce.Application.csproj"
               },
-              "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Shared\\AMSeCommerce.Communication\\AMSeCommerce.Communication.csproj": {
-                "projectPath": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Shared\\AMSeCommerce.Communication\\AMSeCommerce.Communication.csproj"
+              "/home/prado/Downloads/Tcc/eCommerce_API/src/Backend/AMSeCommerce.Infrastructure/AMSeCommerce.Infrastructure.csproj": {
+                "projectPath": "/home/prado/Downloads/Tcc/eCommerce_API/src/Backend/AMSeCommerce.Infrastructure/AMSeCommerce.Infrastructure.csproj"
               }
             }
           }
@@ -177,7 +188,125 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Azure.Storage.Blobs": {
+              "target": "Package",
+              "version": "[12.22.2, )"
+            },
+            "FluentMigrator.Runner": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            },
+            "FluentMigrator.Runner.SqlServer": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.SqlServer.Server": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.101/PortableRuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "/home/prado/Downloads/Tcc/eCommerce_API/src/Backend/AMSeCommerce.Infrastructure/AMSeCommerce.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/prado/Downloads/Tcc/eCommerce_API/src/Backend/AMSeCommerce.Infrastructure/AMSeCommerce.Infrastructure.csproj",
+        "projectName": "AMSeCommerce.Infrastructure",
+        "projectPath": "/home/prado/Downloads/Tcc/eCommerce_API/src/Backend/AMSeCommerce.Infrastructure/AMSeCommerce.Infrastructure.csproj",
+        "packagesPath": "/home/prado/.nuget/packages/",
+        "outputPath": "/home/prado/Downloads/Tcc/eCommerce_API/src/Backend/AMSeCommerce.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/prado/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/usr/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/prado/Downloads/Tcc/eCommerce_API/src/Backend/AMSeCommerce.Domain/AMSeCommerce.Domain.csproj": {
+                "projectPath": "/home/prado/Downloads/Tcc/eCommerce_API/src/Backend/AMSeCommerce.Domain/AMSeCommerce.Domain.csproj"
+              },
+              "/home/prado/Downloads/Tcc/eCommerce_API/src/Shared/AMSeCommerce.Communication/AMSeCommerce.Communication.csproj": {
+                "projectPath": "/home/prado/Downloads/Tcc/eCommerce_API/src/Shared/AMSeCommerce.Communication/AMSeCommerce.Communication.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -203,33 +332,21 @@
               "target": "Package",
               "version": "[6.2.0, )"
             },
-            "Microsoft.Data.Sqlite.Core": {
+            "FluentMigrator.Runner.SqlServer": {
               "target": "Package",
-              "version": "[8.0.10, )"
+              "version": "[6.2.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.10, )"
             },
-            "Microsoft.EntityFrameworkCore.Sqlite.Core": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.10, )"
             },
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
               "version": "[6.35.0, )"
-            },
-            "SQLite": {
-              "target": "Package",
-              "version": "[3.13.0, )"
-            },
-            "SQLitePCLRaw.bundle_e_sqlite3": {
-              "target": "Package",
-              "version": "[2.1.10, )"
-            },
-            "SQLitePCLRaw.core": {
-              "target": "Package",
-              "version": "[2.1.10, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
@@ -256,123 +373,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Backend\\AMSeCommerce.IOC\\AMSeCommerce.IOC.csproj": {
+    "/home/prado/Downloads/Tcc/eCommerce_API/src/Shared/AMSeCommerce.Communication/AMSeCommerce.Communication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Backend\\AMSeCommerce.IOC\\AMSeCommerce.IOC.csproj",
-        "projectName": "AMSeCommerce.IOC",
-        "projectPath": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Backend\\AMSeCommerce.IOC\\AMSeCommerce.IOC.csproj",
-        "packagesPath": "C:\\Users\\guard\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Backend\\AMSeCommerce.IOC\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\guard\\AppData\\Roaming\\NuGet\\NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Backend\\AMSeCommerce.Application\\AMSeCommerce.Application.csproj": {
-                "projectPath": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Backend\\AMSeCommerce.Application\\AMSeCommerce.Application.csproj"
-              },
-              "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Backend\\AMSeCommerce.Infrastructure\\AMSeCommerce.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Backend\\AMSeCommerce.Infrastructure\\AMSeCommerce.Infrastructure.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "dependencies": {
-            "AutoMapper": {
-              "target": "Package",
-              "version": "[13.0.1, )"
-            },
-            "Azure.Storage.Blobs": {
-              "target": "Package",
-              "version": "[12.22.2, )"
-            },
-            "FluentMigrator.Runner": {
-              "target": "Package",
-              "version": "[6.2.0, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[8.0.10, )"
-            },
-            "Microsoft.Extensions.Configuration": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            },
-            "Microsoft.Extensions.DependencyInjection": {
-              "target": "Package",
-              "version": "[8.0.1, )"
-            },
-            "Microsoft.Extensions.DependencyInjection.Abstractions": {
-              "target": "Package",
-              "version": "[8.0.2, )"
-            },
-            "SQLitePCLRaw.bundle_e_sqlite3": {
-              "target": "Package",
-              "version": "[2.1.10, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Shared\\AMSeCommerce.Communication\\AMSeCommerce.Communication.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Shared\\AMSeCommerce.Communication\\AMSeCommerce.Communication.csproj",
+        "projectUniqueName": "/home/prado/Downloads/Tcc/eCommerce_API/src/Shared/AMSeCommerce.Communication/AMSeCommerce.Communication.csproj",
         "projectName": "AMSeCommerce.Communication",
-        "projectPath": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Shared\\AMSeCommerce.Communication\\AMSeCommerce.Communication.csproj",
-        "packagesPath": "C:\\Users\\guard\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Shared\\AMSeCommerce.Communication\\obj\\",
+        "projectPath": "/home/prado/Downloads/Tcc/eCommerce_API/src/Shared/AMSeCommerce.Communication/AMSeCommerce.Communication.csproj",
+        "packagesPath": "/home/prado/.nuget/packages/",
+        "outputPath": "/home/prado/Downloads/Tcc/eCommerce_API/src/Shared/AMSeCommerce.Communication/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\guard\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/prado/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "/usr/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -385,7 +406,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -394,10 +421,6 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
-            },
-            "SQLitePCLRaw.bundle_e_sqlite3": {
-              "target": "Package",
-              "version": "[2.1.10, )"
             }
           },
           "imports": [
@@ -419,26 +442,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Shared\\AMSeCommerce.Exceptions\\AMSeCommerce.Exceptions.csproj": {
+    "/home/prado/Downloads/Tcc/eCommerce_API/src/Shared/AMSeCommerce.Exceptions/AMSeCommerce.Exceptions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Shared\\AMSeCommerce.Exceptions\\AMSeCommerce.Exceptions.csproj",
+        "projectUniqueName": "/home/prado/Downloads/Tcc/eCommerce_API/src/Shared/AMSeCommerce.Exceptions/AMSeCommerce.Exceptions.csproj",
         "projectName": "AMSeCommerce.Exceptions",
-        "projectPath": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Shared\\AMSeCommerce.Exceptions\\AMSeCommerce.Exceptions.csproj",
-        "packagesPath": "C:\\Users\\guard\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\guard\\App1\\AMSeCommerce\\src\\Shared\\AMSeCommerce.Exceptions\\obj\\",
+        "projectPath": "/home/prado/Downloads/Tcc/eCommerce_API/src/Shared/AMSeCommerce.Exceptions/AMSeCommerce.Exceptions.csproj",
+        "packagesPath": "/home/prado/.nuget/packages/",
+        "outputPath": "/home/prado/Downloads/Tcc/eCommerce_API/src/Shared/AMSeCommerce.Exceptions/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\guard\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/prado/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "/usr/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -451,17 +475,17 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "SQLitePCLRaw.bundle_e_sqlite3": {
-              "target": "Package",
-              "version": "[2.1.10, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -478,7 +502,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -10,7 +10,6 @@
     <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="File.TypeChecker" Version="4.1.1" />
     <PackageReference Include="FluentValidation" Version="11.10.0" />
-    <PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" Version="2.1.10" />
   </ItemGroup>
 
   <PropertyGroup>

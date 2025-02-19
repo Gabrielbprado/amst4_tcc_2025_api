@@ -8,6 +8,7 @@ using AMSeCommerce.Application.UseCases.Product.Register;
 using AMSeCommerce.Application.UseCases.Product.Update;
 using AMSeCommerce.Communication.Request.Product;
 using AMSeCommerce.Communication.Response.Product;
+using AMSeCommerce.Domain.Entities;
 using AMSeCommerce.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 
