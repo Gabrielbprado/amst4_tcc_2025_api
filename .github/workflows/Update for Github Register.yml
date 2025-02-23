@@ -1,0 +1,45 @@
+name: Build and Deploy Docker Image
+on:
+  push:
+    branches:
+      - master  # ou main, dependendo do nome da sua branch principal
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write  # Permissão para publicar pacotes no GHCR
+      id-token: write  # Ajuda em alguns casos de autenticação OIDC
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Cache Docker layers
+        uses: actions/cache@v3
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-
+
+      - name: Convert repository name to lowercase
+        run: echo "REPOSITORY_NAME_LOWER=$(echo ${{ github.event.repository.name }} | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
+
+      - name: Build Docker image
+        run: |
+          docker build -t ghcr.io/gabrielbprado/${{ env.REPOSITORY_NAME_LOWER }}:latest .
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GHCR_PAT2 }}  # Certifique-se que esse token está correto
+
+      - name: Push Docker image
+        run: |
+          docker push ghcr.io/gabrielbprado/${{ env.REPOSITORY_NAME_LOWER }}:latest
