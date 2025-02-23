@@ -20,6 +20,7 @@ public class OrderController : AmsEcommerceBaseController
     [HttpPost("pix-payment")]
     [ProducesResponseType(typeof(ResponseOrderJson), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ErrorMessage), StatusCodes.Status400BadRequest)]
+    [AuthenticatedUser]
     public async Task<IActionResult> DoPixOrder([FromServices] IDoPixOrderUseCase useCase, [FromBody] RequestOrderJson request)
     {
         var response = await useCase.Execute(request);

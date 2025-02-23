@@ -53,7 +53,6 @@ public class RegisterProductUseCase(
                 {
                     var fileStream = request.Images[i].OpenReadStream();
                     (var isValidImage, var extension) = fileStream.ValidateAndGetImageExtension();
-                    isValidImage = true;
                     if (!isValidImage)
                         throw new ErrorOnValidatorException(new List<string> { "Only images are accepted" });
                     productImage.ImageUrl = $"{Guid.NewGuid()}{extension}";

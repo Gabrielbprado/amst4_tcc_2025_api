@@ -10,6 +10,8 @@ public class GenerateDescriptionUseCase(IGenerateDescriptionAi generateDescripti
     private readonly IGenerateDescriptionAi _generateDescriptionAi = generateDescriptionAi;
     public Task<ResponseGenerateDescription> Execute(RequestGenerateDescription request)
     {
-        return _generateDescriptionAi.GenerateDescription(request);
+        if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "PRODUCTION")
+            return _generateDescriptionAi.GenerateDescription(request);
+        return _generateDescriptionAi.GenerateDescriptionLocal(request);
     }
 }

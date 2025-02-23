@@ -16,10 +16,10 @@ public static class CreateDatabase
 
         var parameters = new DynamicParameters();
         parameters.Add("name", databaseName);
-
-        var records = dbConnection.Query("SELECT * FROM sys.databases WHERE name = @name", parameters);
-        Console.WriteLine(databaseName);
-        if (records.Any() is false)
-            dbConnection.Execute($"CREATE DATABASE {databaseName}");
+        //
+        // var records = dbConnection.Query("SELECT * FROM sys.databases WHERE name = @name", parameters);
+        // Console.WriteLine(databaseName);
+        // if (records.Any() is false)
+        //     dbConnection.Execute($"CREATE DATABASE {databaseName}");
     }
 }
